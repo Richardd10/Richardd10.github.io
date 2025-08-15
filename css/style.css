@@ -1,0 +1,145 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0.1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    height: 60px; /* Adjust based on your logo size */
+    width: auto;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-item a:hover, .nav-item a.active {
+    color: #4CAF50;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.content-section {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 80% opacity */
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.text-bg {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block; /* Only takes up as much width as needed */
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* For tighter wrapping around text */
+.tight-text-bg {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline; /* Flows with text */
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-decoration-break: clone; /* For proper wrapping at line breaks */
+	display: inline-block; /* Allow background to fit content width */
+    margin-bottom: 15px; 
+    -webkit-box-decoration-break: clone;
+}
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust as needed to control vertical position */
+    text-align: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px; /* Limit width as needed */
+}
+
+.text-bg {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+h1.tight-text-bg, p.tight-text-bg {
+    display: block; /* This makes each element take up full width */
+    margin-left: auto; /* These two margin settings will center the blocks */
+    margin-right: auto;
+    width: fit-content; /* This makes the block only as wide as its content */
+}
