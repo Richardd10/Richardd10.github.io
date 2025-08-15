@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/background.webp');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,4 +142,5 @@ h1.tight-text-bg, p.tight-text-bg {
     margin-left: auto; /* These two margin settings will center the blocks */
     margin-right: auto;
     width: fit-content; /* This makes the block only as wide as its content */
+
 }
