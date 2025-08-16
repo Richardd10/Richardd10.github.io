@@ -89,6 +89,10 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
 }
 .content-section {
     background-color: rgba(255, 255, 255, 0.5); /* White with 80% opacity */
@@ -144,4 +148,5 @@ h1.tight-text-bg, p.tight-text-bg {
     width: fit-content; /* This makes the block only as wide as its content */
 
 }
+
 
