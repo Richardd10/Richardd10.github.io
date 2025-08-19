@@ -1,50 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga oder so - Home</title>
+    <title>Ihre Webseite</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Statischer Hintergrund -->
+    <div id="static-background"></div>
+    
+    <!-- Navigation -->
     <header>
-        <nav class="navbar">
-			<div class="logo">
-				<a href="index.html">
-					<img src="images/logo.png" alt="Your Website Logo">
-				</a>
-			</div>
-            <div class="menu-toggle" id="mobile-menu">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <div id="mobile-menu" class="menu-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="active">Home</a></li>
-                <li class="nav-item"><a href="gallery.html">Galerie</a></li>
-                <li class="nav-item"><a href="info.html">Informationen</a></li>
+                <li class="nav-item"><a href="#section1">Startseite</a></li>
+                <li class="nav-item"><a href="#section2">Termine</a></li>
+                <li class="nav-item"><a href="#section3">Team</a></li>
+                <li class="nav-item"><a href="#section4">Galerie</a></li>
+                <li class="nav-item"><a href="#section5">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-
+    
+    <!-- Inhaltsbereiche -->
     <main>
-        <section class="hero-section">
+        <section id="section1" class="content-section hero-section">
             <div class="hero-content">
-                <h1 class="tight-text-bg">Yoga oder so</h1>
-                <p class="tight-text-bg">Irgendwann demnächst in ihrem Kino</p>
+                <h1>Willkommen auf unserer Webseite</h1>
+                <div class="cta-buttons">
+                    <a href="#section2" class="btn primary-btn">Mehr erfahren</a>
+                </div>
             </div>
         </section>
-
-        <!-- Additional content sections -->
+        
+        <section id="section2" class="content-section">
+            <div class="content-wrapper">
+                <h2>Termine</h2>
+                <p>Hier finden Sie eine Übersicht unserer aktuellen Termine und Veranstaltungen.</p>
+                
+                <div class="appointments">
+                    <div class="appointment-item">
+                        <div class="appointment-date">15. Mai 2023</div>
+                        <div class="appointment-details">
+                            <h3>Frühlingsfest</h3>
+                            <p>Unser jährliches Frühlingsfest mit vielen Aktivitäten für die ganze Familie.</p>
+                            <div class="appointment-time">14:00 - 18:00 Uhr</div>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-item">
+                        <div class="appointment-date">22. Juni 2023</div>
+                        <div class="appointment-details">
+                            <h3>Workshop: Gesunde Ernährung</h3>
+                            <p>Ein informativer Workshop über gesunde Ernährung im Alltag.</p>
+                            <div class="appointment-time">19:00 - 21:00 Uhr</div>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-item">
+                        <div class="appointment-date">10. Juli 2023</div>
+                        <div class="appointment-details">
+                            <h3>Sommerfest</h3>
+                            <p>Unser großes Sommerfest mit Musik, Essen und Unterhaltung.</p>
+                            <div class="appointment-time">16:00 - 22:00 Uhr</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section3" class="content-section">
+            <div class="content-wrapper">
+                <h2>Unser Team</h2>
+                <p>Lernen Sie unser engagiertes Team kennen, das sich um Ihre Bedürfnisse kümmert.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <!-- Platzhalterbild für Teammitglied -->
+                            <div class="placeholder-image">DR</div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Max Mustermann</h3>
+                            <p class="team-position">Geschäftsführer</p>
+                            <p class="team-description">Mit über 15 Jahren Erfahrung leitet Dr. Mustermann unser Unternehmen mit Leidenschaft und Kompetenz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <!-- Platzhalterbild für Teammitglied -->
+                            <div class="placeholder-image">JS</div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Julia Schmidt</h3>
+                            <p class="team-position">Kundenbetreuung</p>
+                            <p class="team-description">Julia ist Ihre erste Ansprechpartnerin bei allen Fragen und sorgt dafür, dass Sie bestens betreut werden.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-photo">
+                            <!-- Platzhalterbild für Teammitglied -->
+                            <div class="placeholder-image">MK</div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Markus Klein</h3>
+                            <p class="team-position">Technischer Leiter</p>
+                            <p class="team-description">Markus ist unser technisches Genie und findet für jedes Problem die perfekte Lösung.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section4" class="content-section">
+            <div class="content-wrapper">
+                <h2>Galerie</h2>
+                <p>Hier finden Sie einige Eindrücke unserer Arbeit.</p>
+                
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/background1.webp" alt="Galeriebild 1">
+                            <div class="gallery-caption">
+                                <h3>Projekt 1</h3>
+                                <p>Beschreibung des ersten Projekts</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/background2.webp" alt="Galeriebild 2">
+                            <div class="gallery-caption">
+                                <h3>Projekt 2</h3>
+                                <p>Beschreibung des zweiten Projekts</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/background3.webp" alt="Galeriebild 3">
+                            <div class="gallery-caption">
+                                <h3>Projekt 3</h3>
+                                <p>Beschreibung des dritten Projekts</p>
+                            </div>
+                        </div>
+                        <!-- Sie können hier weitere Galerieelemente hinzufügen -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section5" class="content-section">
+            <div class="content-wrapper">
+                <h2>Kontakt</h2>
+                <p>Nehmen Sie Kontakt mit uns auf, um mehr über unsere Dienstleistungen zu erfahren.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ihr Name">
+                    <input type="email" placeholder="Ihre E-Mail">
+                    <textarea placeholder="Ihre Nachricht"></textarea>
+                    <button type="submit" class="btn primary-btn">Nachricht senden</button>
+                </form>
+            </div>
+        </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Yoga Website. All rights stretched.</p>
-    </footer>
-
+    
+	<footer>
+		<div class="footer-content">
+			<div class="footer-logo-section">
+				<div class="footer-logo">
+					<img src="images/logo.png" alt="Logo">
+				</div>
+				<p class="copyright">&copy; 2023 Ihr Unternehmen. Alle Rechte vorbehalten.</p>
+			</div>
+			
+			<div class="footer-links">
+				<ul>
+					<li><a href="/datenschutz">Datenschutz</a></li>
+					<li><a href="/impressum">Impressum</a></li>
+					<li><a href="/cookie-richtlinie">Cookie-Richtlinie (EU)</a></li>
+					<li><a href="/haftungsausschluss">Haftungsausschluss</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+    
     <script src="js/main.js"></script>
 </body>
-
 </html>
-

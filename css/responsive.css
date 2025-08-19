@@ -1,7 +1,18 @@
-/* Responsive Design */
+/* ==========================================
+   Responsive Styles
+   ========================================== */
+
+/* Tablet and Mobile Devices (768px and below) */
 @media screen and (max-width: 768px) {
+    /* Navigation adjustments */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
     .menu-toggle {
         display: block;
+        z-index: 101;
+        transition: all 0.3s ease;
     }
 
     .nav-menu {
@@ -9,11 +20,13 @@
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #333;
+        background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
         width: 100%;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        z-index: 100;
     }
 
     .nav-menu.active {
@@ -23,7 +36,15 @@
     .nav-item {
         margin: 1.5rem 0;
     }
+    
+    .nav-item a {
+        font-size: 1.1rem; /* Larger touch targets on mobile */
+        padding: 10px 0;
+        display: inline-block;
+        width: 80%; /* Makes the touch target wider */
+    }
 
+    /* Hamburger menu animation */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -36,7 +57,104 @@
         transform: translateY(-8px) rotate(-45deg);
     }
     
+    /* Logo size adjustment */
     .logo img {
-        height: 30px; /* Slightly smaller on mobile */
+        height: 40px; /* Slightly smaller on mobile but still visible */
+    }
+    
+    /* Content adjustments for better mobile experience */
+    .content-section {
+        padding: 40px 20px;
+        min-height: 80vh; /* Allow sections to be shorter on mobile */
+    }
+    
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    h1.tight-text-bg, p.tight-text-bg {
+        max-width: 90%; /* Prevent text from touching edges */
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0;
+    }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 30px 15px;
+    }
+    
+    h1.tight-text-bg {
+        font-size: 1.8rem;
+        padding: 8px 12px;
+    }
+    
+    p.tight-text-bg {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+    
+    /* Stack footer links on very small screens */
+    .footer-nav ul {
+        flex-direction: column;
+    }
+    
+    .footer-nav li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Portrait Tablets (768px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content-section {
+        padding: 50px 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Ensure content is still readable in landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh; /* Full height needed in landscape */
+    }
+    
+    .content-section {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+    
+    .nav-menu {
+        top: 60px; /* Smaller header in landscape */
+    }
+    
+    .logo img {
+        height: 30px;
     }
 }
