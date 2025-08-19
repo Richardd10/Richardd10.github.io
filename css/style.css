@@ -159,31 +159,18 @@ main {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.65);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section Specific - ÄNDERUNG: Entfernung des grünen Hintergrunds */
 .hero-section {
     padding-top: 120px;
     text-align: center;
     color: #fff;
     position: relative;
 }
-
-/* ENTFERNT: Den transparenten grünen Hintergrund für die gesamte Sektion */
-/* .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(46, 125, 50, 0.4);
-    z-index: -1;
-} */
 
 .hero-content {
     max-width: 800px;
@@ -202,7 +189,7 @@ h1 {
     margin-bottom: 1rem;
     font-weight: 700;
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
 h2 {
@@ -237,13 +224,14 @@ p {
     background-color: #2E7D32;
     color: white;
     padding: 20px;
-    min-width: 120px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     text-align: center;
+	flex-shrink: 0;
 }
 
 .appointment-details {
