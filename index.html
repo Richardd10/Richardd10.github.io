@@ -158,18 +158,29 @@
             </div>
         </section>
         
-        <section id="section5" class="content-section">
-            <div class="content-wrapper">
-                <h2>Kontakt</h2>
-                <p>Nehmen Sie Kontakt mit uns auf, um mehr über unsere Dienstleistungen zu erfahren.</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Ihr Name">
-                    <input type="email" placeholder="Ihre E-Mail">
-                    <textarea placeholder="Ihre Nachricht"></textarea>
-                    <button type="submit" class="btn primary-btn">Nachricht senden</button>
-                </form>
-            </div>
-        </section>
+		<section id="section5" class="content-section">
+			<div class="content-wrapper">
+				<h2>Kontakt</h2>
+				<p>Nehmen Sie Kontakt mit uns auf, um mehr über unsere Dienstleistungen zu erfahren.</p>
+				
+				<!-- Formular mit FormSubmit-Funktionalität -->
+				<form class="contact-form" action="https://formsubmit.co/r.d.10@gmx.de" method="POST">
+					<!-- FormSubmit Konfiguration -->
+					<input type="hidden" name="_subject" value="Neue Kontaktanfrage von der Website">
+					<input type="hidden" name="_template" value="table">
+					<input type="hidden" name="_captcha" value="true">
+					
+					<!-- Bei Bedarf: Weiterleitung nach Absenden -->
+					<input type="hidden" name="_next" value="http://localhost:8000/danke.html">
+					
+					<!-- Formularfelder mit Ihrem bestehenden Design -->
+					<input type="text" name="name" placeholder="Ihr Name" required>
+					<input type="email" name="email" placeholder="Ihre E-Mail" required>
+					<textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+					<button type="submit" class="btn primary-btn">Nachricht senden</button>
+				</form>
+			</div>
+		</section>
     </main>
     
 	<footer>

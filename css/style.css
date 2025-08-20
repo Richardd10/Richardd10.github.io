@@ -184,6 +184,15 @@ main {
     color: #000; /* Schwarz */
 }
 
+.tight-text-bg {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline; /* Flows with text */
+    padding: 2px 6px;
+    border-radius: 3px;
+    box-decoration-break: clone; /* For proper wrapping at line breaks */
+    -webkit-box-decoration-break: clone;
+}
+
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -662,4 +671,13 @@ footer {
     .gallery-container {
         grid-template-columns: 1fr;
     }
+}
+.error {
+    border: 2px solid #ff3860 !important;
+}
+
+.error-message {
+    color: #ff3860;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
 }

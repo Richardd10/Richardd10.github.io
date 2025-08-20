@@ -119,3 +119,67 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call on page load
     setActiveNavLink();
 });
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(event) {
+        let isValid = true;
+        
+        // Name validieren
+        const name = document.getElementById('name');
+        if (name.value.trim() === '') {
+            isValid = false;
+            highlightError(name, 'Bitte geben Sie Ihren Namen ein');
+        } else {
+            removeError(name);
+        }
+        
+        // E-Mail validieren
+        const email = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+            isValid = false;
+            highlightError(email, 'Bitte geben Sie eine gültige E-Mail-Adresse ein');
+        } else {
+            removeError(email);
+        }
+        
+        // Nachricht validieren
+        const message = document.getElementById('message');
+        if (message.value.trim() === '') {
+            isValid = false;
+            highlightError(message, 'Bitte geben Sie eine Nachricht ein');
+        } else {
+            removeError(message);
+        }
+        
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+    
+    function highlightError(element, message) {
+        element.classList.add('error');
+        
+        // Fehlermeldung erstellen oder aktualisieren
+        let errorMsg = element.nextElementSibling;
+        if (!errorMsg || !errorMsg.classList.contains('error-message')) {
+            errorMsg = document.createElement('div');
+            errorMsg.className = 'error-message';
+            element.parentNode.insertBefore(errorMsg, element.nextSibling);
+        }
+        errorMsg.textContent = message;
+    }
+    
+    function removeError(element) {
+        element.classList.remove('error');
+        
+        // Fehlermeldung entfernen, falls vorhanden
+        const errorMsg = element.nextElementSibling;
+        if (errorMsg && errorMsg.classList.contains('error-message')) {
+            errorMsg.remove();
+        }
+    }
+});
+</script>
